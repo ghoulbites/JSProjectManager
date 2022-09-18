@@ -1,0 +1,15 @@
+root {
+    --title-blue: ;
+}
+
+.project-card {
+    border: none;
+    padding: 0;
+}
+.project-card .project-title {
+    font-size: 1.25rem;
+    margin: 0.15rem;
+}
+.project-card .card-item {
+    display: block;
+}

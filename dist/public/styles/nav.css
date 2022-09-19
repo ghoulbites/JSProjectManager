@@ -1,0 +1,25 @@
+.navbar {
+}
+.nav-items-collection {
+}
+.nav-item {
+}
+
+.hamburger {
+    background-color: inherit;
+    border: 0px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .hamburger {
+        height: 1rem;
+        padding: 0;
+        margin: 0;
+    }
+    .hamburger span {
+        display: block;
+        min-width: 30px;
+        min-height: 5px;
+        background-color: white;
+    }
+}

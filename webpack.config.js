@@ -1,24 +1,42 @@
 const path = require("path")
+const TerserPlugin = require("terser-webpack-plugin")
 
 module.exports = {
     // Optional and for development only. This provides the ability to
     // map the built code back to the original source format when debugging.
-    devtool: "eval-source-map",
+    //devtool: "eval-source-map",
     entry: "./src/app.js",
     output: {
-        filename: "bundle.js",
         path: path.resolve(__dirname + "dist"),
+        publicPath: "/dist/",
+        filename: "bundle.js",
     },
     module: {
         rules: [
             {
+                exclude: /node_modules/,
+            },
+            {
                 test: "/.css$/",
-                use: ["style-loader", "css-loader"],
+                use: [{ loader: "style-loader" }, { loader: "css-loader" }],
             },
             {
                 test: "/.html$/",
-                use: ["html-loader"],
+                use: { loader: "html-loader" },
             },
+        ],
+    },
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                terserOptions: {
+                    format: {
+                        comments: false,
+                    },
+                },
+                extractComments: false,
+            }),
         ],
     },
 }

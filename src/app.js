@@ -41,7 +41,7 @@ addButton.addEventListener("click", () => {
             title: "Trial",
             titleColor: "--title-blue",
             openTickets: 12,
-            status: "Open",
+            status: "Completed",
             dateCreated: `${date}`,
             lastModified: `${date}`,
         })

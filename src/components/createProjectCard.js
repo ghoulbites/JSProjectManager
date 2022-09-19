@@ -24,21 +24,31 @@ export function createProjectCard(project_item) {
     projectTitle.style.color = project_item.titleColor
 
     // Info Items
-    const openTicketCounter = document.createElement("span")
+    const openTicketCounter = document.createElement("div")
     openTicketCounter.classList.add("card-item")
     openTicketCounter.textContent = `Open Tickets: ${project_item.openTickets}`
 
-    const createdTime = document.createElement("span")
+    const createdTime = document.createElement("div")
     createdTime.classList.add("card-item")
     createdTime.textContent = `Created @: ${project_item.timeCreated}`
 
-    const lastModifiedTime = document.createElement("span")
+    const lastModifiedTime = document.createElement("div")
     lastModifiedTime.classList.add("card-item")
     lastModifiedTime.textContent = `Last Modified: ${project_item.lastModified}`
 
-    const status = document.createElement("span")
+    const status = document.createElement("div")
     status.classList.add("card-item")
-    status.textContent = `Status: ${project_item.status}`
+    status.textContent = `Status: `
+
+    // Status Word Coloring
+    const statusWord = document.createElement("span")
+    statusWord.textContent = `${project_item.status}`
+    if (project_item.status === "Ongoing") {
+        statusWord.className = "status-ongoing"
+    } else if (project_item.status === "Completed") {
+        statusWord.className = "status-completed"
+    }
+    status.appendChild(statusWord)
 
     // Populating the card
     cardElement.appendChild(projectTitle)

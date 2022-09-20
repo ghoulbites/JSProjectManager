@@ -1,25 +1,65 @@
 .navbar {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    padding: 0;
 }
+
+.navbar h1 {
+    margin: 0;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
 .nav-items-collection {
+    display: grid;
+    margin: auto 0;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    justify-content: right;
 }
 .nav-item {
+    grid-column-start: 2;
+    padding: 1.5rem 0;
+    box-sizing: content-box;
+    background-color: inherit;
+    border: 0;
+    min-height: calc(5 * var(--hamburger-height));
+    border-style: outset;
+    border-bottom: 1px solid var(--bg-main);
+    transition: 150ms ease;
+    cursor: pointer;
+}
+.nav-item:hover {
+    background-color: var(--card-main);
+    border-bottom: 4px solid grey;
+}
+.nav-item a {
+    font-size: 1.25rem;
+    text-decoration: none;
 }
 
 .hamburger {
+    display: none;
     background-color: inherit;
     border: 0px;
+    cursor: pointer;
+}
+.hamburger * {
+    margin-top: var(--hamburger-height);
+}
+.hamburger *:first-child {
+    margin: 0;
 }
 
 @media only screen and (max-width: 1000px) {
     .hamburger {
+        display: block;
         height: 1rem;
         padding: 0;
         margin: 0;
     }
     .hamburger span {
         display: block;
-        min-width: 30px;
-        min-height: 5px;
+        min-width: var(--hamburger-width);
+        min-height: var(--hamburger-height);
         background-color: white;
     }
 }

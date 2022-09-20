@@ -1,4 +1,6 @@
 :root {
+    --hamburger-height: 5px;
+    --hamburger-width: 30px;
     --card-main: #610094;
     --card-hover: #3f0071;
     --bg-main: #000000;

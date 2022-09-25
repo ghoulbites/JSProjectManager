@@ -60,3 +60,8 @@ export function createProjectCard(project_item) {
     // Return the card element
     return cardElement
 }
+
+export function deleteProjectCard(card_id) {
+    const card = document.querySelector(`data-project-i-d="${card-id}"`)
+    console.log(card)
+}

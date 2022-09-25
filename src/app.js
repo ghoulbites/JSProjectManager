@@ -27,7 +27,7 @@ function trialWrite(userID, first, last, email, DOB, projectsArray) {
 }
 
 //#region Main Code
-import { createProjectCard } from "./components/createProjectCard"
+import { createProjectCard } from "./components/ProjectCard"
 const addButton = document.querySelector(".add")
 const addArea = document.querySelector(".secondary-content")
 

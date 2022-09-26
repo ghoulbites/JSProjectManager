@@ -20,11 +20,15 @@ body * {
 
 .wrapper {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 6fr 2fr;
 }
 
 .main-wrapper {
     padding: 0 1rem;
+    overflow-y: scroll;
+    min-height: calc(100vh - 5rem);
+    max-height: calc(100vh - 5rem);
+
 }
 .main-wrapper .title {
 
@@ -101,11 +105,23 @@ body * {
 }
 
 
+.side-wrapper {
+    min-height: calc(100vh - 5rem);
+    max-height: calc(100vh - 5rem);
+}
 .side-wrapper button {
+    position: relative;
+    top: 10px;
+    right: 10px;
     background-color: inherit;
     border: none;
 }
 .side-wrapper button::after {
     display: inline-block;
     content: "\00d7";
+}
+.side-wrapper:first-child {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20px;
 }

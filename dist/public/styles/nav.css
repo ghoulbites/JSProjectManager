@@ -4,7 +4,7 @@
     position: sticky;
     top: 0;
     padding: 0;
-    min-height: 5rem;
+    min-height: 4rem;
     max-height: fit-content;
     background-color: var(--bg-main);
     border-bottom: 1px solid var(--card-main);
@@ -52,7 +52,7 @@
     box-sizing: border-box;
     background-color: inherit;
     border: 0;
-    min-height: calc(5 * var(--hamburger-height));
+    min-height: calc(4 * var(--hamburger-height));
     height: 100%;
     border-style: outset;
     border-bottom: 4px solid var(--bg-main);

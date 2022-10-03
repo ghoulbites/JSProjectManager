@@ -21,7 +21,7 @@ body * {
 
 .wrapper {
     display: grid;
-    grid-template-columns: 6fr 2fr;
+    grid-template-columns: 5fr 2fr;
 }
 
 .main-wrapper {
@@ -112,7 +112,7 @@ body * {
     border-left: 1px solid var(--card-main);
     box-sizing: border-box;
 }
-.side-wrapper button:first-of-type {
+.side-wrapper > button:first-of-type {
     position: relative;
     top: 1rem;
     right: calc(-100% + 32px + 1.5rem);
@@ -121,7 +121,7 @@ body * {
     font-size: 2.25rem;
     cursor: pointer;
 }
-.side-wrapper button:first-of-type img {
+.side-wrapper > button:first-of-type img {
     
 }
 /*
@@ -137,4 +137,70 @@ body * {
 .side-wrapper .side-display-content h3 {
     color: inherit;
     font-size: 1.5rem;
+}
+
+.side-display-ticket-display {
+    max-width: 100%;
+}
+.ticket-carousel {
+    display: flex;
+    flex-direction: row;
+}
+
+.ticket-carousel > button {
+    display: inline;
+    position: relative;
+    background-color: var(--card-main);
+    border: 0;
+    cursor: pointer;
+}
+.ticket-carousel > button:hover {
+    background-color: var(--card-hover);
+}
+.ticket-carousel > button:first-of-type {
+    left: 0
+}
+.ticket-carousel > button:last-of-type {
+    right: 0
+}
+.ticket-carousel > button:first-of-type::after {
+    content: "\003c";
+}
+.ticket-carousel > button:last-of-type::after {
+    content: "\003e";
+}
+
+.ticket-carousel-items-display {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 200px;
+    height: 100px;
+}
+/* 2018 Spec - For Safari 11, Chrome 69+ */
+.ticket-carousel-items-display {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Needed to work on iOS Safari */
+}
+/* 2015 Spec - For Firefox, Edge, IE */
+.ticket-carousel-items-display {
+    scroll-snap-type: mandatory;
+    -ms-scroll-snap-type: mandatory;
+    scroll-snap-points-x: repeat(100%);
+    -ms-scroll-snap-points-x: repeat(100%);
+}
+.ticket-carousel-item {
+    display: inline-block;
+    scroll-snap-align: center;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+.ticket-carousel-item h5 {
+}
+.ticket-carousel-item span {
+    
 }

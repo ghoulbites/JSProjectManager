@@ -145,6 +145,7 @@ body * {
 .ticket-carousel {
     display: flex;
     flex-direction: row;
+    min-width: 100%;
 }
 
 .ticket-carousel > button {
@@ -174,7 +175,7 @@ body * {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
-    width: 200px;
+    width: 100%;
     height: 100px;
 }
 /* 2018 Spec - For Safari 11, Chrome 69+ */

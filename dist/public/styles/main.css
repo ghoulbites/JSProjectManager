@@ -13,7 +13,8 @@ html,
 body {
     margin: 0;
     background-color: var(--bg-main);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
 }
 body * {
     color: white;
@@ -32,7 +33,6 @@ body * {
     box-sizing: border-box;
 }
 .main-wrapper .title {
-
 }
 
 .primary-content {
@@ -105,12 +105,12 @@ body * {
     color: rgb(33, 230, 16);
 }
 
-
 .side-wrapper {
     min-height: calc(100vh - 5rem);
     max-height: calc(100vh - 5rem);
     border-left: 1px solid var(--card-main);
     box-sizing: border-box;
+    max-width: 30vw;
 }
 .side-wrapper > button:first-of-type {
     position: relative;
@@ -121,15 +121,7 @@ body * {
     font-size: 2.25rem;
     cursor: pointer;
 }
-.side-wrapper > button:first-of-type img {
-    
-}
-/*
-.side-wrapper button::after {
-    display: inline-block;
-    content: "\007d";
-}
-*/
+
 .side-wrapper .side-display-content {
     padding: 0 1rem;
     color: #ffffff;
@@ -159,10 +151,10 @@ body * {
     background-color: var(--card-hover);
 }
 .ticket-carousel > button:first-of-type {
-    left: 0
+    left: 0;
 }
 .ticket-carousel > button:last-of-type {
-    right: 0
+    right: 0;
 }
 .ticket-carousel > button:first-of-type::after {
     content: "\003c";
@@ -201,7 +193,34 @@ body * {
     box-sizing: border-box;
 }
 .ticket-carousel-item h5 {
+    font-size: 1rem;
+    margin: 1rem 0 0.75rem;
 }
 .ticket-carousel-item span {
-    
+    display: block;
+    margin: auto 0;
+}
+
+.side-display-control-buttons {
+    position: relative;
+    bottom: 0;
+    padding: 0rem 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    gap: calc(100% - 2rem - 168px);
+}
+.side-display-control-buttons button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--card-main);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.side-display-control-buttons button:hover {
+    background-color: var(--card-hover);
 }

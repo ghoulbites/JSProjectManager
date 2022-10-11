@@ -1,0 +1,36 @@
+.dialog-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  background-color: grey;
+}
+
+.dialog-container form h3 {
+  font-size: 2rem;
+  margin: 1rem 0 2rem;
+}
+
+.dialog-container form .input-grp {
+  display: flex;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.dialog-container form .input-grp label {
+  font-size: 1.25rem;
+  min-width: 120px;
+  width: 20%;
+}
+.dialog-container form .input-grp input,
+.dialog-container form .input-grp select,
+.dialog-container form .input-grp textarea {
+  width: 100%;
+  color: black;
+}
+
+.dialog-container form .input-grp textarea {
+  height: 4rem;
+  font-size: 1.25rem;
+}
